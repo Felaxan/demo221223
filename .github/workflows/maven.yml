@@ -29,4 +29,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B install --file BirimTestOrnek2/pom.xml
-
+    - name: Coverage
+      id: jacoco
+      uses: madrapps/jacoco-report@v1.3
+      with:
+       paths: ${{ github.workspace }}/BirimTestOrnek2/target/site/jacoco/jacoco.xml
+       token: ${{ secrets.GITHUB_TOKEN }}
