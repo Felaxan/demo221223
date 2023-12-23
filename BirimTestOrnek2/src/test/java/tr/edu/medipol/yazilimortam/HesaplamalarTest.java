@@ -33,7 +33,7 @@ public class HesaplamalarTest {
 	@Test
 	public void testTopla() {
 		int sonuc = Hesaplamalar.topla(15, 20);
-		assertEquals(35, sonuc);
+		assertEquals(40, sonuc);
 
 	}
 
